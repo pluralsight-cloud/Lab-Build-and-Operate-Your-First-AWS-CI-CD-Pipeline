@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "No dependencies to install for the status board site"
+  build:
+    commands:
+      - echo "Validating site files"
+      - test -f index.html
+      - test -f styles.css
+      - echo "Packaging the release"
+
+artifacts:
+  files:
+    - index.html
+    - styles.css
+    - appspec.yml
